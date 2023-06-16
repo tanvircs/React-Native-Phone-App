@@ -1,5 +1,5 @@
 <!--- README.md --->
-# React Native Environment Setup - macOS -> Target Android App
+# React Native Environment CLI Setup - macOS -> Target Android App
 ## Installing dependencies
 You will need Node, Watchman, the React Native command line interface, a JDK, and Android Studio.
 While you can use any editor of your choice to develop your app, you will need to install Android Studio 
@@ -118,6 +118,70 @@ npx react-native start
 ```shell
 npx react-native run-android
 ```
+
+# React Native Environment CLI Setup - Windows -> Target Android App
+## Node, JDK
+Install Node via [Chocolatey](https://chocolatey.org/install), a popular package manager for Windows.
+
+React Native also requires [Java SE Development Kit (JDK)]([https://chocolatey.org/install](https://openjdk.org/projects/jdk/11/)), which can be installed using Chocolatey as well.
+
+Open an Administrator Command Prompt (right-click Command Prompt and select "Run as Administrator"), 
+then run the following command:
+```shell
+choco install -y nodejs-lts microsoft-openjdk11
+```
+If you have already installed Node on your system, make sure it is Node 14 or newer. If you already 
+have a JDK on your system, we recommend JDK11. You may encounter problems using higher JDK versions.
+
+## Android development environment
+## Install Android Studio
+following step 2 on the upper side.
+##  Install the Android SDK
+following step 2 on the upper side.
+## Configure the ANDROID_HOME environment variable
+The React Native tools require some environment variables to be set up in order to build apps with native code.
+
+1. Open the Windows Control Panel.  
+2. Click on User Accounts, then click User Accounts again
+3. Click on Change my environment variables  
+4. Click on New... to create a new ANDROID_HOME user variable that points to the path to your Android SDK:
+   
+The SDK is installed, by default, at the following location:
+```shell
+%LOCALAPPDATA%\Android\Sdk
+```
+You can find the actual location of the SDK in the Android Studio "Settings" dialog, under Appearance & 
+Behavior → System Settings → Android SDK.
+
+Open a new Command Prompt window to ensure the new environment variable is loaded before proceeding to the next step.
+
+1. Open powershell
+2. Copy and paste Get-ChildItem -Path Env:\ into powershell
+3. Verify ANDROID_HOME has been added
+
+## Add platform-tools to Path
+1. Open the Windows Control Panel.
+2. Click on User Accounts, then click User Accounts again
+3. Click on Change my environment variables
+4. Select the Path variable.
+5. Click Edit.
+6. Click New and add the path to platform-tools to the list.
+   
+The default location for this folder is:
+```shell
+%LOCALAPPDATA%\Android\Sdk\platform-tools
+```
+
+## Creating a new application
+same as before in the upper size
+
+## Preparing the Android device
+same as before in the upper size
+
+## Running your React Native application
+same as before in the upper size
+
+
 
 
 
