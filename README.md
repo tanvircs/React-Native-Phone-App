@@ -109,5 +109,15 @@ any Phone from the list and click "Next", then select the Tiramisu API Level 33 
 Click "Next" then "Finish" to create your AVD. At this point you should be able to click on the green triangle button next to your AVD 
 to launch it, then proceed to the next step.
 
+## Running React Native application
+### Step 1: Start Metro
+```shell
+npx react-native start
+```
+### Step 2: Start your application
+```shell
+npx react-native run-android
+```
+
 
 
